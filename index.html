@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+	<title>
+		Plastic Project
+	</title>
+	<style type="text/css">
+		body{background: black;}
+
+		@font-face { font-family: 'DungGeunMo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+		.rogo{width: 450px; margin: auto; position: absolute; margin-left: 41%; margin-top: 12%; transition: all 5s;}
+
+		.tlerogo{font-family: 'Pacifico', cursive; font-size: 5em;position: absolute; margin: auto; margin-top: 19%; margin-left: 38%; display: none; }
+
+		.part1{display:none; opacity: 0; transition: all 5s;}
+		.part2{display:none; opacity: 0; transition: all 5s;}
+		.twinkle{transition: twink 2s infinite alternate;}
+
+		@keyframes disappear{
+			from{opacity: 1;}
+			to{opacity: 0;}
+		}
+
+		@keyframes appear{
+			from{opacity: 0;}
+			to{opacity: 1;}
+		}
+
+		@keyframes wtb{
+			from{color: white;}
+			to{color: black;}
+		}
+
+		@keyframes twink{
+			from{display: none;}
+			to{display: block;}
+		}
+	</style>
+</head>
+<body>
+	<div class="start" id="start">
+		<img class="rogo" src="rogo.png" id="rogo">
+		<p class="tlerogo" 
+		id="tlerogo" style="opacity:0; color: white; transition: all 5s;">Plastic Project</p>
+	</div>
+
+	<div class="part1" id="part1">
+		<img src="back1.png" style="width : 1910px; margin-top: 5%;position: absolute;">
+		<img src="win.png" style="position: absolute; margin: auto; margin-left: 11.2%; margin-top: 18%; " id="win">
+		<img src="winlight.png" style="position: absolute; margin: auto; margin-left: 11.2%; margin-top: 18%; " id="winlight">
+		<img src="charac.png" style="position: absolute; margin: auto; width: 80px; margin-top: 30%; margin-left: 10%; opacity: 0;" id="charac">
+		<img src="twinkle.png" style="position: absolute; margin: auto; width: 100px; margin-top: 15%; margin-left: 14.5%; " id="twinkle">
+		<p style="font-family: 'DungGeunMo'; color: white; position: absolute; margin: auto;margin-top: 31%; margin-left: 14%; display: none;" id="cikme">click me</p>
+		<img src="five.png" style="position: absolute;margin: auto; margin-top: 26%; margin-left: 14%; width: 150px; display: none;" id="five">
+		<img src="stone.png" style="position: absolute;margin: auto; margin-top: 26%; margin-left: 14%; width: 150px; display: none;" id="stone">
+		<img src="marmar.png" style="position: absolute; margin: auto; width: 80px; margin-top: 30%; margin-left: 10%; display: none;" id="marmar" >
+		<p style="font-family: 'DungGeunMo'; color: black; position: absolute; margin: auto;margin-top: 30%; margin-left: 22%; display: none;" id="cikme2">click me</p>
+		<img src="go.png" style="position: absolute;margin: auto; margin-top: 26%; margin-left: 14%; width: 150px; display: none;" id="go">
+		<img src="gogo.png" style="position: absolute; margin: auto; width: 80px; margin-top: 30%; margin-left: 10%; display: none;" id="gogo">
+	</div>
+
+	<div class="part2" id="part2">
+		<img src="back2.png" style="width : 1910px; margin-top: 5%;position: absolute;">
+	</div>
+	
+	<script type="text/javascript">
+		rogo.onclick = function(){
+			rogo.style.opacity = "0";
+			tlerogo.style.display = "block";
+			tlerogo.style.animation = "appear 1s linear forwards";
+		}
+
+		tlerogo.onclick = function(){
+			start.style.animation = "wtb 2s forwards";
+			part1.style.display = "block";
+			part1.style.animation = "appear 1s linear forwards";
+			
+		}
+
+		winlight.onclick = function(){
+			winlight.style.display = "none";
+			charac.style.animation = "appear 1s linear forwards";
+			twinkle.style.display = "none";
+			cikme.style.display =  "block";
+		}
+
+		charac.onclick = function(){
+			cikme.style.display = "none";
+			five.style.display = "block";
+			cikme2.style.display = "block";
+		}
+
+		five.onclick = function(){
+			stone.style.display = "block";
+			charac.style.display = "none";
+			marmar.style.display = "block";
+		}
+
+		stone.onclick = function(){
+			go.style.display = "block";
+			gogo.style.display = "block";
+		}
+
+		go.onclick = function(){
+			part2.style.display = "block";
+			part2.style.animation = "appear 1s linear forwards";
+		}
+	</script>
+</body>
+</html>
